@@ -53,17 +53,13 @@ $(document).on('turbolinks:load', function(){
     //send the card info to Stripe.
     return false;
   });
-  
   //Stripe will return a card token.
-  function stripeResponseHandler(status, reposne){
+  function stripeResponseHandler(status, response) {
     //Get the token from the response
     var token = response.id;
-    
-    
     //inject the card token in a hidden field.
     theFrom.append( $('<input type="hidden" name="user[stripe_card_token]">').val(token));
-    
     //Submit the Sing Up Button.
     theFrom.get(0).submit();
-  });
+  }
 });
