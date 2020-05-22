@@ -5,7 +5,9 @@
     <%= csrf_meta_tags %>
     <link href="//fonts.googleapis.com/css2?family=Mukta:wght@400;700;800&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "https://js.stripe.com/v2/", type: 'text/javascript' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY %>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
   </head>
 
