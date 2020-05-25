@@ -75,7 +75,15 @@ h1,h2,h3 {
   font-family: 'Mukta', sans-serif;
 }
 
+.flash-container {
+  position: absolute;
+  width: 100%;
+}
+
 // Flash Notices Alert
-.alert-notice {
-  display: none;
+.alert-notice, .alert-alert {
+  text-align: center;
+  background: #ffc107;
+  border-color: #6c757d;
+  margin-top: -14px;  
 }
